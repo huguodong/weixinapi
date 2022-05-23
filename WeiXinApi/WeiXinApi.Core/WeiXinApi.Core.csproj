@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>WeiXinApi.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="WeiXinApi.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Furion" Version="3.3.0" />
+    <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="3.3.0" />
+    <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="3.3.0" />
+    <PackageReference Include="Senparc.Weixin.AspNet" Version="0.8.1" />
+    <PackageReference Include="Senparc.Weixin.MP" Version="16.18.2.1" />
+  </ItemGroup>
+
+</Project>

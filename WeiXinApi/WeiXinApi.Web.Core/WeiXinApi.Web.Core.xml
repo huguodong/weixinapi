@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeiXinApi.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="M:WeiXinApi.Web.Core.Startup.ConfigTraceLog">
+            <summary>
+            配置微信跟踪日志（演示，按需）
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,17 +1,18 @@
-﻿using Furion.DynamicApiController;
-using Microsoft.AspNetCore.Mvc;
-using Senparc.Weixin;
-using Senparc.Weixin.MP;
-using Senparc.Weixin.MP.Entities.Request;
-using System;
+﻿
 
-namespace WeiXinApi.Application.Services.WeiXin
+namespace WeiXinApi.Application.Services
 {
     public class WeiXinService : IDynamicApiController
     {
         public static readonly string Token = Config.SenparcWeixinSetting.MpSetting.Token;//与微信公众账号后台的Token设置保持一致，区分大小写。
         public static readonly string EncodingAESKey = Config.SenparcWeixinSetting.MpSetting.EncodingAESKey;//与微信公众账号后台的EncodingAESKey设置保持一致，区分大小写。
         public static readonly string AppId = Config.SenparcWeixinSetting.MpSetting.WeixinAppId;//与微信公众账号后台的AppId设置保持一致，区分大小写。
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public WeiXinService(IHttpContextAccessor​ httpContextAccessor)
+        {
+            this._httpContextAccessor = httpContextAccessor;
+        }
 
 
         [HttpGet("/wx")]
@@ -30,6 +31,47 @@ namespace WeiXinApi.Application.Services.WeiXin
                 return ("failed:" + postModel.Signature + "," + Senparc.Weixin.MP.CheckSignature.GetSignature(postModel.Timestamp, postModel.Nonce, Token) + "。" +
                     "如果你在浏览器中看到这句话，说明此地址可以被作为微信公众账号后台的Url，请注意保持Token一致。");
             }
+        }
+
+        [HttpPost("/wx")]
+        public async Task<ContentResult> Receive([FromQuery] PostModel postModel)
+        {
+
+            ContentResult content = new ContentResult();
+            Console.WriteLine("收到消息");
+            //测试时候忽略验证
+            //if (!CheckSignature.Check(postModel.Signature, postModel.Timestamp, postModel.Nonce, Token))
+            //{
+            //    content.Content = "参数错误！";
+            //    return content;
+            //}
+
+            postModel.Token = Token;
+            postModel.EncodingAESKey = EncodingAESKey;//根据自己后台的设置保持一致
+            postModel.AppId = AppId;//根据自己后台的设置保持一致
+
+            //v4.2.2之后的版本，可以设置每个人上下文消息储存的最大数量，防止内存占用过多，如果该参数小于等于0，则不限制（实际最大限制 99999）
+            //注意：如果使用分布式缓存，不建议此值设置过大，如果需要储存历史信息，请使用数据库储存
+            //自定义MessageHandler，对微信请求的详细判断操作都在这里面。
+            try
+            {
+                var maxRecordCount = 10;
+                var messageHandler = new CustomMessageHandler(_httpContextAccessor.HttpContext.Request.Body, postModel, maxRecordCount);
+
+                messageHandler.SaveRequestMessageLog();//记录 Request 日志（可选）
+                var ct = new CancellationToken();
+                await messageHandler.ExecuteAsync(ct);//执行微信处理过程（关键）
+                messageHandler.SaveResponseMessageLog();//记录 Response 日志（可选）
+                var result = messageHandler.ResponseDocument.ToString();
+                content.Content = result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                content.Content = "";
+            }
+
+            return content;
         }
 
     }

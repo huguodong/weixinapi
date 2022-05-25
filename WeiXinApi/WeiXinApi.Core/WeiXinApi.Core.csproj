@@ -16,6 +16,7 @@
     <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="3.3.0" />
     <PackageReference Include="Senparc.Weixin.AspNet" Version="0.8.1" />
     <PackageReference Include="Senparc.Weixin.MP" Version="16.18.2.1" />
+    <PackageReference Include="SqlSugarCore" Version="5.0.8.3" />
   </ItemGroup>
 
 </Project>

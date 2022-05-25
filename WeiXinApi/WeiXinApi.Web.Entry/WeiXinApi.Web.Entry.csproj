@@ -26,6 +26,11 @@
 	<ItemGroup>
 		<ProjectReference Include="..\WeiXinApi.Web.Core\WeiXinApi.Web.Core.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Update="weixin.sqlite">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 	<ProjectExtensions>
 		<VisualStudio>
 			<UserProperties properties_4launchsettings_1json__JsonSchema="" />

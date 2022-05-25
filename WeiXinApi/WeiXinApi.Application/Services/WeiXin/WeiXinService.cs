@@ -1,5 +1,7 @@
 ﻿
 
+using WeiXinApi.Core;
+
 namespace WeiXinApi.Application.Services
 {
     public class WeiXinService : IDynamicApiController
@@ -8,16 +10,19 @@ namespace WeiXinApi.Application.Services
         public static readonly string EncodingAESKey = Config.SenparcWeixinSetting.MpSetting.EncodingAESKey;//与微信公众账号后台的EncodingAESKey设置保持一致，区分大小写。
         public static readonly string AppId = Config.SenparcWeixinSetting.MpSetting.WeixinAppId;//与微信公众账号后台的AppId设置保持一致，区分大小写。
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IMessageService _messageService;
 
-        public WeiXinService(IHttpContextAccessor​ httpContextAccessor)
+        public WeiXinService(IHttpContextAccessor​ httpContextAccessor, IMessageService messageService)
         {
             this._httpContextAccessor = httpContextAccessor;
+            this._messageService = messageService;
         }
 
 
         [HttpGet("/wx")]
         public string Index([FromQuery] PostModel postModel, string echostr)
         {
+            //var data = DbContext.Db.Queryable<MessageReceive>().ToList();
             //System.Console.WriteLine(echostr);
             //return echostr;
 
@@ -36,7 +41,7 @@ namespace WeiXinApi.Application.Services
         [HttpPost("/wx")]
         public async Task<ContentResult> Receive([FromQuery] PostModel postModel)
         {
-
+            string filePath = App.WebHostEnvironment.ContentRootPath;
             ContentResult content = new ContentResult();
             Console.WriteLine("收到消息");
             //测试时候忽略验证
@@ -56,12 +61,12 @@ namespace WeiXinApi.Application.Services
             try
             {
                 var maxRecordCount = 10;
-                var messageHandler = new CustomMessageHandler(_httpContextAccessor.HttpContext.Request.Body, postModel, maxRecordCount);
+                var messageHandler = new CustomMessageHandler(_httpContextAccessor.HttpContext.Request.Body, postModel, _messageService, maxRecordCount);
 
-                messageHandler.SaveRequestMessageLog();//记录 Request 日志（可选）
+                messageHandler.SaveRequestMessageLog(filePath);//记录 Request 日志（可选）
                 var ct = new CancellationToken();
                 await messageHandler.ExecuteAsync(ct);//执行微信处理过程（关键）
-                messageHandler.SaveResponseMessageLog();//记录 Response 日志（可选）
+                messageHandler.SaveResponseMessageLog(filePath);//记录 Response 日志（可选）
                 var result = messageHandler.ResponseDocument.ToString();
                 content.Content = result;
             }

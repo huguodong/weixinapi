@@ -10,6 +10,7 @@ using Senparc.CO2NET.RegisterServices;
 using Senparc.Weixin;
 using Senparc.Weixin.Entities;
 using Senparc.Weixin.RegisterServices;
+using System.IO;
 
 namespace WeiXinApi.Web.Core;
 
@@ -29,6 +30,7 @@ public class Startup : AppStartup
         services.AddControllers()
                 .AddInject();
 
+        services.AddMemoryCache();//使用本地缓存必须添加
         var config = App.Configuration;
         services.AddSenparcGlobalServices(config)//Senparc.CO2NET 全局注册
                  .AddSenparcWeixinServices(config);//Senparc.Weixin 注册

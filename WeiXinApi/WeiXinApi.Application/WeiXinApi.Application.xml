@@ -4,5 +4,22 @@
         <name>WeiXinApi.Application</name>
     </assembly>
     <members>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnTextDbRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText)">
+            <summary>
+            从数据库处理文字消息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnTextRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText,Senparc.Weixin.MP.MessageContexts.DefaultMpMessageContext,System.Int32,System.Int32)">
+            <summary>
+            处理文字消息
+            </summary>
+            <param name="requestMessage"></param>
+            <param name="mpMessageContext"></param>
+            <param name="ExpireMinutes"></param>
+            <param name="MaxRecordCount"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

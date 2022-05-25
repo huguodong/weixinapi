@@ -14,6 +14,10 @@ global using Microsoft.AspNetCore.Http;
 global using System.Threading;
 global using WeiXinApi.Application.Handler;
 global using WeiXinApi.Application.Services;
+global using Furion.DependencyInjection;
+global using Senparc.NeuChar.Entities.Request;
+global using System.Text;
+global using Furion;
 namespace WeiXinApi.Application
 {
     internal class Global

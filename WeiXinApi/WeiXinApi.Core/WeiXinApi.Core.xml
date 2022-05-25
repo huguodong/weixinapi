@@ -4,5 +4,30 @@
         <name>WeiXinApi.Core</name>
     </assembly>
     <members>
+        <member name="T:WeiXinApi.Core.MessageReceive">
+             <summary>
+             自动回复表
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.MessageReceive.Id">
+             <summary>
+             主键 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.MessageReceive.ReceiveType">
+             <summary>
+             回复类型:文字，图片等 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.MessageReceive.KeyWords">
+             <summary>
+             关键字 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.MessageReceive.ReceiveString">
+             <summary>
+             回复内容 
+            </summary>
+        </member>
     </members>
 </doc>

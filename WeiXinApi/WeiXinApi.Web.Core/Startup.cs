@@ -9,6 +9,7 @@ using Senparc.CO2NET.AspNet;
 using Senparc.CO2NET.RegisterServices;
 using Senparc.Weixin;
 using Senparc.Weixin.Entities;
+using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.RegisterServices;
 using System.IO;
 
@@ -58,10 +59,8 @@ public class Startup : AppStartup
          }, true)
          .UseSenparcWeixin(senparcWeixinSetting, (weixinRegister, weixinSetting) =>
          {
-
-
+             AccessTokenContainer.RegisterAsync(senparcWeixinSetting.MpSetting.WeixinAppId, senparcWeixinSetting.MpSetting.WeixinAppSecret).Wait();
          });
-
         app.UseCorsAccessor();
 
         app.UseAuthentication();
@@ -95,7 +94,10 @@ public class Startup : AppStartup
         WeixinTrace.OnWeixinExceptionFunc = async ex =>
         {
             //加入每次触发WeixinExceptionLog后需要执行的代码
-            System.Console.WriteLine("加入每次触发WeixinExceptionLog后需要执行的代码");
+            System.Console.WriteLine("异常了======================");
+            System.Console.WriteLine(ex.Message);
+            System.Console.WriteLine(ex.InnerException);
+            System.Console.WriteLine("======================");
         };
     }
 }

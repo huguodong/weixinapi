@@ -4,11 +4,8 @@ using WeiXinApi.Core;
 
 namespace WeiXinApi.Application.Services
 {
-    public class WeiXinService : IDynamicApiController
+    public class WeiXinService : BaseService
     {
-        public static readonly string Token = Config.SenparcWeixinSetting.MpSetting.Token;//与微信公众账号后台的Token设置保持一致，区分大小写。
-        public static readonly string EncodingAESKey = Config.SenparcWeixinSetting.MpSetting.EncodingAESKey;//与微信公众账号后台的EncodingAESKey设置保持一致，区分大小写。
-        public static readonly string AppId = Config.SenparcWeixinSetting.MpSetting.WeixinAppId;//与微信公众账号后台的AppId设置保持一致，区分大小写。
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMessageService _messageService;
 
@@ -17,7 +14,6 @@ namespace WeiXinApi.Application.Services
             this._httpContextAccessor = httpContextAccessor;
             this._messageService = messageService;
         }
-
 
         [HttpGet("/wx")]
         public string Index([FromQuery] PostModel postModel, string echostr)

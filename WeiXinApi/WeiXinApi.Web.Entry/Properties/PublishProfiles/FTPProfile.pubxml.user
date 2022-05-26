@@ -8,17 +8,17 @@
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAEsqRTYzCMkOe/CpkcVh19gAAAAACAAAAAAAQZgAAAAEAACAAAADfZjTBV2gD286Pl1BhY0M09fgkDFHSIPs6rkaKTLZprwAAAAAOgAAAAAIAACAAAADPwtP1JmUQQ6nRiN2zAsyvUlB2i2PqyUojltjP3QeDOCAAAACjtbRGFk24iRlDCe0pYjzZA1nctO+zqCHd59lvfk0b/UAAAABSsleVsckrLwclvNFxx24qlpZyDbVN93Rlp3VwweIDZI4cJD2PbUiOTXwHVdU/BUFi01j0CRFk9xF8y4C5/y4Z</EncryptedPassword>
     <_PublishTargetUrl>ftp://153.101.199.83/wx</_PublishTargetUrl>
-    <History>True|2022-05-24T11:05:20.8091418Z;True|2022-05-24T10:50:22.8892412+08:00;True|2022-05-24T10:42:53.2945128+08:00;True|2022-05-24T10:36:08.7347453+08:00;True|2022-05-24T10:34:14.0775648+08:00;True|2022-05-24T10:28:13.9329805+08:00;True|2022-05-24T10:24:24.8603356+08:00;True|2022-05-24T10:05:19.6309216+08:00;True|2022-05-24T10:03:01.8435116+08:00;True|2022-05-24T09:56:03.6426298+08:00;True|2022-05-23T16:48:12.9971116+08:00;True|2022-05-23T16:17:41.7565747+08:00;True|2022-05-23T16:11:32.2996562+08:00;True|2022-05-23T16:04:12.8367045+08:00;True|2022-05-23T15:43:00.0342574+08:00;True|2022-05-23T15:17:31.0358815+08:00;True|2022-05-23T15:04:38.9530906+08:00;True|2022-05-23T14:57:26.6163269+08:00;True|2022-05-23T14:56:35.3038933+08:00;True|2022-05-23T14:52:41.6191091+08:00;True|2022-05-23T14:43:46.6891535+08:00;True|2022-05-23T14:40:15.9919428+08:00;True|2022-05-23T14:37:08.0868026+08:00;True|2022-05-23T13:36:22.1697694+08:00;False|2022-05-23T13:33:59.0913119+08:00;False|2022-05-23T13:32:12.8402626+08:00;True|2022-05-19T11:55:37.6636506+08:00;</History>
+    <History>True|2022-05-26T03:36:51.1653823Z;False|2022-05-26T11:35:50.9288671+08:00;True|2022-05-26T11:26:44.5712091+08:00;True|2022-05-26T11:21:42.6099822+08:00;True|2022-05-26T11:01:07.0623425+08:00;True|2022-05-26T10:54:20.6125209+08:00;True|2022-05-26T10:51:07.8186272+08:00;True|2022-05-26T10:44:10.4522690+08:00;True|2022-05-26T10:27:24.2113348+08:00;True|2022-05-26T10:02:35.1395694+08:00;True|2022-05-26T10:00:27.5853304+08:00;True|2022-05-26T09:49:18.5361863+08:00;True|2022-05-26T09:43:21.1471795+08:00;True|2022-05-26T09:21:45.6114195+08:00;True|2022-05-26T09:17:46.2893819+08:00;True|2022-05-26T09:13:41.6156684+08:00;True|2022-05-26T09:04:01.9075522+08:00;True|2022-05-26T08:52:39.4060217+08:00;True|2022-05-24T19:05:20.8091418+08:00;True|2022-05-24T10:50:22.8892412+08:00;True|2022-05-24T10:42:53.2945128+08:00;True|2022-05-24T10:36:08.7347453+08:00;True|2022-05-24T10:34:14.0775648+08:00;True|2022-05-24T10:28:13.9329805+08:00;True|2022-05-24T10:24:24.8603356+08:00;True|2022-05-24T10:05:19.6309216+08:00;True|2022-05-24T10:03:01.8435116+08:00;True|2022-05-24T09:56:03.6426298+08:00;True|2022-05-23T16:48:12.9971116+08:00;True|2022-05-23T16:17:41.7565747+08:00;True|2022-05-23T16:11:32.2996562+08:00;True|2022-05-23T16:04:12.8367045+08:00;True|2022-05-23T15:43:00.0342574+08:00;True|2022-05-23T15:17:31.0358815+08:00;True|2022-05-23T15:04:38.9530906+08:00;True|2022-05-23T14:57:26.6163269+08:00;True|2022-05-23T14:56:35.3038933+08:00;True|2022-05-23T14:52:41.6191091+08:00;True|2022-05-23T14:43:46.6891535+08:00;True|2022-05-23T14:40:15.9919428+08:00;True|2022-05-23T14:37:08.0868026+08:00;True|2022-05-23T13:36:22.1697694+08:00;False|2022-05-23T13:33:59.0913119+08:00;False|2022-05-23T13:32:12.8402626+08:00;True|2022-05-19T11:55:37.6636506+08:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="applicationsettings.json">
       <publishTime>05/23/2022 16:47:58</publishTime>
     </File>
     <File Include="appsettings.Development.json">
-      <publishTime>05/23/2022 16:11:11</publishTime>
+      <publishTime>05/26/2022 09:28:24</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>05/23/2022 16:11:15</publishTime>
+      <publishTime>05/26/2022 13:56:21</publishTime>
     </File>
     <File Include="Ben.Demystifier.dll">
       <publishTime>04/23/2021 08:57:32</publishTime>
@@ -345,49 +345,49 @@
       <publishTime>03/30/2022 17:07:38</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>05/24/2022 19:08:54</publishTime>
+      <publishTime>05/26/2022 14:57:23</publishTime>
     </File>
     <File Include="weixin.sqlite">
-      <publishTime>05/24/2022 16:20:22</publishTime>
+      <publishTime>05/25/2022 14:58:10</publishTime>
     </File>
     <File Include="WeiXinApi.Application.dll">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:18</publishTime>
     </File>
     <File Include="WeiXinApi.Application.pdb">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:18</publishTime>
     </File>
     <File Include="WeiXinApi.Application.xml">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:18</publishTime>
     </File>
     <File Include="WeiXinApi.Core.dll">
-      <publishTime>05/24/2022 19:03:52</publishTime>
+      <publishTime>05/26/2022 08:52:19</publishTime>
     </File>
     <File Include="WeiXinApi.Core.pdb">
-      <publishTime>05/24/2022 19:03:52</publishTime>
+      <publishTime>05/26/2022 08:52:19</publishTime>
     </File>
     <File Include="WeiXinApi.Core.xml">
-      <publishTime>05/24/2022 19:03:52</publishTime>
+      <publishTime>05/26/2022 08:52:19</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Core.dll">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:19</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Core.pdb">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:19</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Core.xml">
-      <publishTime>05/24/2022 19:08:50</publishTime>
+      <publishTime>05/26/2022 14:57:19</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Entry.deps.json">
-      <publishTime>05/24/2022 19:08:54</publishTime>
+      <publishTime>05/26/2022 14:44:23</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Entry.dll">
-      <publishTime>05/24/2022 19:08:53</publishTime>
+      <publishTime>05/26/2022 14:57:20</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Entry.exe">
-      <publishTime>05/24/2022 19:08:53</publishTime>
+      <publishTime>05/26/2022 14:57:20</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Entry.pdb">
-      <publishTime>05/24/2022 19:08:53</publishTime>
+      <publishTime>05/26/2022 14:57:20</publishTime>
     </File>
     <File Include="WeiXinApi.Web.Entry.runtimeconfig.json">
       <publishTime>05/24/2022 16:34:16</publishTime>

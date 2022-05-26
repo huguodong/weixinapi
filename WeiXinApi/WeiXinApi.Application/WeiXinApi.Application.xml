@@ -4,6 +4,108 @@
         <name>WeiXinApi.Application</name>
     </assembly>
     <members>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnImageRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageImage)">
+            <summary>
+            处理图片
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnVoiceRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageVoice)">
+            <summary>
+            处理音频
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnVideoRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageVideo)">
+            <summary>
+            处理视频消息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnShortVideoRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageShortVideo)">
+            <summary>
+            小视频消息处理
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnLocationRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageLocation)">
+            <summary>
+            处理位置信息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.MaterialAddInput.UploadMediaFileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.MaterialAddInput.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.UploadTemp(WeiXinApi.Application.Services.MaterialAddInput)">
+            <summary>
+            上传临时素材
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.GetPath(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            保存文件到本地
+            </summary>
+            <param name="file"></param>
+            <param name="isTemp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveDbRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText)">
+            <summary>
+            处理文字消息,包括回复图片
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveImageRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageImage)">
+            <summary>
+            处理图片
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveLocationRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageLocation)">
+            <summary>
+            处理位置信息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveShortVideoRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageShortVideo)">
+            <summary>
+            处理小视频消息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveVideoRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageVideo)">
+            <summary>
+            处理视频消息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveVoiceRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageVoice)">
+            <summary>
+            处理语音消息
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
         <member name="M:WeiXinApi.Application.Services.IMessageService.OnTextDbRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText)">
             <summary>
             从数据库处理文字消息

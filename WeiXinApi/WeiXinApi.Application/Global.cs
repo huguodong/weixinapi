@@ -18,6 +18,13 @@ global using Furion.DependencyInjection;
 global using Senparc.NeuChar.Entities.Request;
 global using System.Text;
 global using Furion;
+global using Senparc.Weixin.MP.AdvancedAPIs;
+global using System.Linq;
+global using WeiXinApi.Core;
+global using System.ComponentModel.DataAnnotations;
+global using Senparc.CO2NET.Helpers;
+global using Senparc.CO2NET.Helpers.BaiduMap;
+global using System.Collections.Generic;
 namespace WeiXinApi.Application
 {
     internal class Global

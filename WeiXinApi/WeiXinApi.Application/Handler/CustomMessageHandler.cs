@@ -73,7 +73,75 @@ namespace WeiXinApi.Application.Handler
         {
             var currentMessageContext = await base.GetCurrentMessageContext();
             //var result = await _messageService.OnTextRequestAsync(requestMessage, currentMessageContext, GlobalMessageContext.ExpireMinutes, GlobalMessageContext.MaxRecordCount);
-            var result = await _messageService.OnTextDbRequestAsync(requestMessage);
+            //var result = await _messageService.OnTextDbRequestAsync(requestMessage);
+            var result = await _messageService.OnReceiveDbRequestAsync(requestMessage);
+            return result;
+        }
+
+
+        /// <summary>
+        /// 处理图片
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnImageRequestAsync(RequestMessageImage requestMessage)
+        {
+            var result = await _messageService.OnReceiveImageRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 处理音频
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnVoiceRequestAsync(RequestMessageVoice requestMessage)
+        {
+            var result = await _messageService.OnReceiveVoiceRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 处理视频消息
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnVideoRequestAsync(RequestMessageVideo requestMessage)
+        {
+            var result = await _messageService.OnReceiveVideoRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 小视频消息处理
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnShortVideoRequestAsync(RequestMessageShortVideo requestMessage)
+        {
+            var result = await _messageService.OnReceiveShortVideoRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 处理位置信息
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnLocationRequestAsync(RequestMessageLocation requestMessage)
+        {
+            var result = await _messageService.OnReceiveLocationRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 处理链接消息
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnLinkRequestAsync(RequestMessageLink requestMessage)
+        {
+            var result = await _messageService.OnReceiveLinkRequestAsync(requestMessage);
             return result;
         }
     }

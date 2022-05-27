@@ -19,6 +19,13 @@ namespace WeiXinApi.Application.Services
         Task<IResponseMessageBase> OnReceiveImageRequestAsync(RequestMessageImage requestMessage);
 
         /// <summary>
+        /// 处理链接消息
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        Task<IResponseMessageBase> OnReceiveLinkRequestAsync(RequestMessageLink requestMessage);
+
+        /// <summary>
         /// 处理位置信息
         /// </summary>
         /// <param name="requestMessage"></param>

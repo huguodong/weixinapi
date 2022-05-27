@@ -144,5 +144,7 @@ namespace WeiXinApi.Application.Handler
             var result = await _messageService.OnReceiveLinkRequestAsync(requestMessage);
             return result;
         }
+
+
     }
 }

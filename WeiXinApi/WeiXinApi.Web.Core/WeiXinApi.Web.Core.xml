@@ -4,6 +4,47 @@
         <name>WeiXinApi.Web.Core</name>
     </assembly>
     <members>
+        <member name="T:WeiXinApi.Web.Core.XnRestfulResultProvider">
+            <summary>
+            规范化RESTful风格返回值
+            </summary>
+        </member>
+        <member name="T:WeiXinApi.Web.Core.XnRestfulResult`1">
+            <summary>
+            RESTful风格---XIAONUO返回格式
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Success">
+            <summary>
+            执行成功
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Extras">
+            <summary>
+            附加数据
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Web.Core.XnRestfulResult`1.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
         <member name="M:WeiXinApi.Web.Core.Startup.ConfigTraceLog">
             <summary>
             配置微信跟踪日志（演示，按需）

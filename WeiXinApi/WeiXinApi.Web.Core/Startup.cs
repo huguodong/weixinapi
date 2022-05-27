@@ -12,6 +12,8 @@ using Senparc.Weixin.Entities;
 using Senparc.Weixin.MP.Containers;
 using Senparc.Weixin.RegisterServices;
 using System.IO;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 
 namespace WeiXinApi.Web.Core;
 
@@ -29,7 +31,7 @@ public class Startup : AppStartup
         services.AddCorsAccessor();
 
         services.AddControllers()
-                .AddInject();
+                 .AddInjectWithUnifyResult();
 
         services.AddMemoryCache();//使用本地缓存必须添加
         var config = App.Configuration;

@@ -16,6 +16,7 @@ namespace WeiXinApi.Application.Services
         }
 
         [HttpGet("/wx")]
+        [NonUnify]
         public string Index([FromQuery] PostModel postModel, string echostr)
         {
             //var data = DbContext.Db.Queryable<MessageReceive>().ToList();
@@ -35,6 +36,7 @@ namespace WeiXinApi.Application.Services
         }
 
         [HttpPost("/wx")]
+        [NonUnify]
         public async Task<ContentResult> Receive([FromQuery] PostModel postModel)
         {
             string filePath = App.WebHostEnvironment.ContentRootPath;

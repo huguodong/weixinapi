@@ -25,6 +25,9 @@ global using System.ComponentModel.DataAnnotations;
 global using Senparc.CO2NET.Helpers;
 global using Senparc.CO2NET.Helpers.BaiduMap;
 global using System.Collections.Generic;
+global using Senparc.Weixin.MP.CommonAPIs;
+global using Senparc.Weixin.MP.Entities.Menu;
+global using Furion.FriendlyException;
 namespace WeiXinApi.Application
 {
     internal class Global

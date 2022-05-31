@@ -29,5 +29,70 @@
              回复内容 
             </summary>
         </member>
+        <member name="T:WeiXinApi.Core.QrCode">
+             <summary>
+             二维码表
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.Id">
+             <summary>
+             id 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.ActionName">
+             <summary>
+             二维码类型 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.ExpireSeconds">
+             <summary>
+             过期时间 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.SceneId">
+             <summary>
+             SceneId 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.Ticket">
+             <summary>
+             ticket 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.CodeUrl">
+             <summary>
+             二维码地址 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.ExpiredTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.ReceiveInfo">
+             <summary>
+             回复设置 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.QrCode.IsExpired">
+            <summary>
+            是否过期
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.ReceiveInfo.ReceiveType">
+             <summary>
+             回复类型:文字，图片等 
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Core.ReceiveInfo.ReceiveString">
+             <summary>
+             回复内容 
+            </summary>
+        </member>
     </members>
 </doc>

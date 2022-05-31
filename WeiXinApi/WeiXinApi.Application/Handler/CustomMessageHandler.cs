@@ -1,7 +1,7 @@
 ﻿
 namespace WeiXinApi.Application.Handler
 {
-    public class CustomMessageHandler : MessageHandler<DefaultMpMessageContext>
+    public partial class CustomMessageHandler : MessageHandler<DefaultMpMessageContext>
     {
         private readonly IMessageService _messageService;
         private string appId = Config.SenparcWeixinSetting.WeixinAppId;
@@ -144,6 +144,7 @@ namespace WeiXinApi.Application.Handler
             var result = await _messageService.OnReceiveLinkRequestAsync(requestMessage);
             return result;
         }
+
 
 
     }

@@ -16,7 +16,7 @@
       }
     ]
   },
-   //CO2NET 设置
+  //CO2NET 设置
   "SenparcSetting": {
     //以下为 CO2NET 的 SenparcSetting 全局配置，请勿修改 key，勿删除任何项
 
@@ -43,8 +43,8 @@
     //公众号
     "Token": "jinwandalaohu", //说明：字符串内两侧#和{}符号为 Azure DevOps 默认的占位符格式，如果您有明文信息，请删除同占位符，修改整体字符串，不保留#和{}，如：{"Token": "MyFullToken"}
     "EncodingAESKey": "FedxunkqWMkDO7az6uBFWCzildl2SPTAWw4L34JftYg",
-    "WeixinAppId": "wx516f8a22a8f365ae",
-    "WeixinAppSecret": "7a4866b8bd2bf8569cb8dc10d488c353",
+    "WeixinAppId": "wxb149ff385e6b956b",
+    "WeixinAppSecret": "493c5ea9aad32c39205d7cd00153c625",
     //扩展及代理参数
     "AgentUrl": "AgentUrl",
     "AgentToken": "AgentToken",

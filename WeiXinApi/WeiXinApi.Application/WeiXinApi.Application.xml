@@ -46,6 +46,27 @@
             <param name="requestMessage"></param>
             <returns></returns>
         </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_SubscribeRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Subscribe)">
+            <summary>
+            订阅或关注事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_UnsubscribeRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Unsubscribe)">
+            <summary>
+            退订
+            unsubscribe事件的意义在于及时删除网站应用中已经记录的OpenID绑定，消除冗余数据。并且关注用户流失的情况。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_ScanRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Scan)">
+            <summary>
+            扫描带参数二维码事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
         <member name="P:WeiXinApi.Application.Services.MaterialAddInput.UploadMediaFileType">
             <summary>
             文件类型
@@ -71,11 +92,23 @@
             <param name="isTemp"></param>
             <returns></returns>
         </member>
-        <member name="M:WeiXinApi.Application.Services.MenuService.CrateMenu(WeiXinApi.Application.Services.AddMenuInput)">
+        <member name="M:WeiXinApi.Application.Services.MenuService.CrateMenu(Senparc.Weixin.MP.GetMenuResultFull)">
             <summary>
             创建菜单
             </summary>
-            <param name="input"></param>
+            <param name="resultFull"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MenuService.GetMenu">
+            <summary>
+            获取菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MenuService.Delete">
+            <summary>
+            删除菜单
+            </summary>
             <returns></returns>
         </member>
         <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveDbRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText)">
@@ -142,6 +175,55 @@
             <param name="mpMessageContext"></param>
             <param name="ExpireMinutes"></param>
             <param name="MaxRecordCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_SubscribeRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Subscribe)">
+            <summary>
+            订阅
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_UnsubscribeRequest(Senparc.Weixin.MP.Entities.RequestMessageEvent_Unsubscribe)">
+            <summary>
+            取消订阅
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_ScanRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Scan)">
+            <summary>
+            扫描带参数二维码事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.QRInput.ActionName">
+            <summary>
+            二维码类型
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.QRInput.ExpireSeconds">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.QRInput.ReceiveInfo">
+            <summary>
+            回复设置
+            </summary>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.QRService.Add(WeiXinApi.Application.Services.QRInput)">
+            <summary>
+            生成二维码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.QRService.Page(System.Int32,System.Int32)">
+            <summary>
+            二维码列表
+            </summary>
             <returns></returns>
         </member>
     </members>

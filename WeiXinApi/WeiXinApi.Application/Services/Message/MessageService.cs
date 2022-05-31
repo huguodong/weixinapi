@@ -2,7 +2,7 @@
 
 namespace WeiXinApi.Application.Services
 {
-    public class MessageService : IMessageService, ITransient
+    public partial class MessageService : IMessageService, ITransient
     {
 
         private string appId = Config.SenparcWeixinSetting.WeixinAppId;
@@ -223,6 +223,9 @@ namespace WeiXinApi.Application.Services
             });
             return responseMessage;
         }
+
+
+
 
     }
 }

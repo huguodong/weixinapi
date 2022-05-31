@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeiXinApi.Application.Services
+﻿namespace WeiXinApi.Application.Services
 {
     public class QRInput
     {

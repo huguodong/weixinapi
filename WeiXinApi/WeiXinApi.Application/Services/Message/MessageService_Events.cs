@@ -140,5 +140,12 @@ namespace WeiXinApi.Application.Services
             responseMessage.Content = "您点击了view按钮，将打开网页：" + requestMessage.EventKey;
             return responseMessage;
         }
+
+        public async Task OnEvent_TemplateSendJobFinishRequestAsync(RequestMessageEvent_TemplateSendJobFinish requestMessage)
+        {
+            Console.WriteLine("进入模板事件推送");
+
+            Console.WriteLine($"发送结果:{requestMessage.Status}");
+        }
     }
 }

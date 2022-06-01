@@ -69,5 +69,16 @@
             var result = await _messageService.OnEvent_ViewRequestAsync(requestMessage);
             return result;
         }
+
+        /// <summary>
+        /// 模板发送事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnEvent_TemplateSendJobFinishRequestAsync(RequestMessageEvent_TemplateSendJobFinish requestMessage)
+        {
+            await _messageService.OnEvent_TemplateSendJobFinishRequestAsync(requestMessage);
+            return await base.OnEvent_TemplateSendJobFinishRequestAsync(requestMessage);
+        }
     }
 }

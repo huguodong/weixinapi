@@ -142,16 +142,6 @@ namespace WeiXinApi.Application.Services
             return result;
         }
 
-        /// <summary>
-        /// 获取自定义菜单配置
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet("/menu/personal")]
-        public async Task<dynamic> GetPersonalMenu()
-        {
-            var result = CommonApi.GetCurrentSelfMenuInfo(AppId);
-            return result;
-        }
 
     }
 }

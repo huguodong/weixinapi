@@ -88,6 +88,13 @@
             <param name="requestMessage"></param>
             <returns></returns>
         </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_TemplateSendJobFinishRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_TemplateSendJobFinish)">
+            <summary>
+            模板发送事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
         <member name="P:WeiXinApi.Application.Services.MaterialAddInput.UploadMediaFileType">
             <summary>
             文件类型
@@ -154,12 +161,6 @@
             测试个性化菜单匹配结果
             </summary>
             <param name="user_id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:WeiXinApi.Application.Services.MenuService.GetPersonalMenu">
-            <summary>
-            获取自定义菜单配置
-            </summary>
             <returns></returns>
         </member>
         <member name="M:WeiXinApi.Application.Services.IMessageService.OnReceiveDbRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageText)">
@@ -270,6 +271,13 @@
             <param name="requestMessage"></param>
             <returns></returns>
         </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_TemplateSendJobFinishRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_TemplateSendJobFinish)">
+            <summary>
+            模板发送事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
         <member name="M:WeiXinApi.Application.Services.MessageService.GetScanRequest(System.String)">
             <summary>
             获取扫描事件结果
@@ -303,6 +311,109 @@
             <summary>
             二维码列表
             </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.IndustryInput.Id1">
+            <summary>
+            行业代码1
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.IndustryInput.Id2">
+            <summary>
+            行业代码2
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateInput.TemplateId">
+            <summary>
+            模板ID
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateInput.OpenId">
+            <summary>
+            开发者微信号
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateInput.Url">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateInput.MiniProgram">
+            <summary>
+            小程序信息
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateInput.Data">
+            <summary>
+            模板数据
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateData.first">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateData.keyword1">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateData.keyword2">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateData.keyword3">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateData.remark">
+            <summary>
+            跳转链接
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateDataInfo.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TemplateDataInfo.color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.TemplateService.SetIndustry(WeiXinApi.Application.Services.IndustryInput)">
+            <summary>
+            设置行业Id
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.TemplateService.GetIndustry">
+            <summary>
+            获取行业信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.TemplateService.GetTemplate">
+            <summary>
+            获取模板列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.TemplateService.Delete(System.String)">
+            <summary>
+            删除模板
+            </summary>
+            <param name="template_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.TemplateService.Send(WeiXinApi.Application.Services.TemplateInput)">
+            <summary>
+            发送模板消息
+            </summary>
+            <param name="input"></param>
             <returns></returns>
         </member>
     </members>

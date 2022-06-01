@@ -7,6 +7,7 @@ namespace WeiXinApi.Application.Services
         
 
 
+
         /// <summary>
         /// 处理文字消息,包括回复图片
         /// </summary>

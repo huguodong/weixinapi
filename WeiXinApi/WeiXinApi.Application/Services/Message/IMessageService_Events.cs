@@ -46,5 +46,11 @@
         /// <returns></returns>
         Task<IResponseMessageBase> OnEvent_ViewRequestAsync(RequestMessageEvent_View requestMessage);
 
+        /// <summary>
+        /// 模板发送事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        Task OnEvent_TemplateSendJobFinishRequestAsync(RequestMessageEvent_TemplateSendJobFinish requestMessage);
     }
 }

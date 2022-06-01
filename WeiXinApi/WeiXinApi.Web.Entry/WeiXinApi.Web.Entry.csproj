@@ -9,13 +9,9 @@
 
 	<ItemGroup>
 		<Compile Remove="Controllers\**" />
-		<Compile Remove="wwwroot\**" />
 		<Content Remove="Controllers\**" />
-		<Content Remove="wwwroot\**" />
 		<EmbeddedResource Remove="Controllers\**" />
-		<EmbeddedResource Remove="wwwroot\**" />
 		<None Remove="Controllers\**" />
-		<None Remove="wwwroot\**" />
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
@@ -25,6 +21,11 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\WeiXinApi.Web.Core\WeiXinApi.Web.Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Update="wwwroot\Images\music.jpeg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="weixin.sqlite">

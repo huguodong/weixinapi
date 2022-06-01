@@ -35,5 +35,39 @@
             var result = await _messageService.OnEvent_ScanRequestAsync(requestMessage);
             return result;
         }
+
+
+        /// <summary>
+        /// 位置事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnEvent_LocationRequestAsync(RequestMessageEvent_Location requestMessage)
+        {
+            var result = await _messageService.OnEvent_LocationRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 点击事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnEvent_ClickRequestAsync(RequestMessageEvent_Click requestMessage)
+        {
+            var result = await _messageService.OnEvent_ClickRequestAsync(requestMessage);
+            return result;
+        }
+
+        /// <summary>
+        /// 打开网页事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        public override async Task<IResponseMessageBase> OnEvent_ViewRequestAsync(RequestMessageEvent_View requestMessage)
+        {
+            var result = await _messageService.OnEvent_ViewRequestAsync(requestMessage);
+            return result;
+        }
     }
 }

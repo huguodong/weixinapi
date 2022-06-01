@@ -93,5 +93,38 @@ namespace WeiXinApi.Application.Services
             }
 
         }
+
+
+        /// <summary>
+        /// 创建菜单
+        /// </summary>
+        /// <param name="resultFull"></param>
+        /// <param name="menuMatchRule"></param>
+        /// <returns></returns>
+        //[HttpPost("/menu/add")]
+        //public dynamic CratePersonalMenu(GetMenuResultFull resultFull, MenuMatchRule menuMatchRule)
+        //{
+        //    try
+        //    {
+        //        var buttonGroup = CommonApi.GetMenuFromJsonResult(resultFull, new ButtonGroup()).menu;
+        //        var result = CommonApi.CreateMenu(AppId, buttonGroup);
+        //        if (result.errmsg == "ok")
+        //        {
+        //            return "菜单更新成功";
+        //        }
+        //        else
+        //        {
+        //            return result;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        throw Oops.Oh($"更新失败:{ex.Message}");
+        //    }
+
+        //}
+
+
     }
 }

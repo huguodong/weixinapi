@@ -25,5 +25,26 @@
         Task<IResponseMessageBase> OnEvent_ScanRequestAsync(RequestMessageEvent_Scan requestMessage);
 
 
+        /// <summary>
+        /// 位置事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        Task<IResponseMessageBase> OnEvent_LocationRequestAsync(RequestMessageEvent_Location requestMessage);
+
+        /// <summary>
+        /// 点击事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        Task<IResponseMessageBase> OnEvent_ClickRequestAsync(RequestMessageEvent_Click requestMessage);
+
+        /// <summary>
+        /// 打开网页事件
+        /// </summary>
+        /// <param name="requestMessage"></param>
+        /// <returns></returns>
+        Task<IResponseMessageBase> OnEvent_ViewRequestAsync(RequestMessageEvent_View requestMessage);
+
     }
 }

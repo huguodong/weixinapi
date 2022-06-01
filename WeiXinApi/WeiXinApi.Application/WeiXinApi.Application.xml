@@ -67,6 +67,27 @@
             <param name="requestMessage"></param>
             <returns></returns>
         </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_LocationRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Location)">
+            <summary>
+            位置事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_ClickRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Click)">
+            <summary>
+            点击事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Handler.CustomMessageHandler.OnEvent_ViewRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_View)">
+            <summary>
+            打开网页事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
         <member name="P:WeiXinApi.Application.Services.MaterialAddInput.UploadMediaFileType">
             <summary>
             文件类型
@@ -196,6 +217,34 @@
             扫描带参数二维码事件
             </summary>
             <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_LocationRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Location)">
+            <summary>
+            位置事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_ClickRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_Click)">
+            <summary>
+            点击事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.IMessageService.OnEvent_ViewRequestAsync(Senparc.Weixin.MP.Entities.RequestMessageEvent_View)">
+            <summary>
+            打开网页事件
+            </summary>
+            <param name="requestMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MessageService.GetScanRequest(System.String)">
+            <summary>
+            获取扫描事件结果
+            </summary>
+            <param name="eventKey"></param>
             <returns></returns>
         </member>
         <member name="P:WeiXinApi.Application.Services.QRInput.ActionName">

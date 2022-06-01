@@ -4,7 +4,9 @@ namespace WeiXinApi.Application.Services
 {
     public partial interface IMessageService
     {
- 
+        
+
+
         /// <summary>
         /// 处理文字消息,包括回复图片
         /// </summary>

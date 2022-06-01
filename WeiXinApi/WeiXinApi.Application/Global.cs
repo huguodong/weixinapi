@@ -28,6 +28,8 @@ global using System.Collections.Generic;
 global using Senparc.Weixin.MP.CommonAPIs;
 global using Senparc.Weixin.MP.Entities.Menu;
 global using Furion.FriendlyException;
+global using Senparc.CO2NET.Utilities;
+global using SqlSugar.Extensions;
 namespace WeiXinApi.Application
 {
     internal class Global

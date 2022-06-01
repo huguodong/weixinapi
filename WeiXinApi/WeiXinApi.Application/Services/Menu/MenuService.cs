@@ -2,6 +2,7 @@
 using Mapster;
 using Newtonsoft.Json;
 using Senparc.CO2NET.Extensions;
+using Senparc.Weixin.Entities;
 using StackExchange.Profiling.Internal;
 
 namespace WeiXinApi.Application.Services
@@ -96,35 +97,61 @@ namespace WeiXinApi.Application.Services
 
 
         /// <summary>
-        /// 创建菜单
+        /// 创建个性化菜单
         /// </summary>
-        /// <param name="resultFull"></param>
-        /// <param name="menuMatchRule"></param>
+        /// <param name="input"></param>
         /// <returns></returns>
-        //[HttpPost("/menu/add")]
-        //public dynamic CratePersonalMenu(GetMenuResultFull resultFull, MenuMatchRule menuMatchRule)
-        //{
-        //    try
-        //    {
-        //        var buttonGroup = CommonApi.GetMenuFromJsonResult(resultFull, new ButtonGroup()).menu;
-        //        var result = CommonApi.CreateMenu(AppId, buttonGroup);
-        //        if (result.errmsg == "ok")
-        //        {
-        //            return "菜单更新成功";
-        //        }
-        //        else
-        //        {
-        //            return result;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
+        [HttpPost("/menu/addpersonal")]
+        public dynamic CratePersonalMenu(AddPersonalInput input)
+        {
+            try
+            {
+                WxJsonResult result = null;
+                var buttonGroup = CommonApi.GetMenuFromJsonResult(input.ResultFull, new ConditionalButtonGroup()).menu;
 
-        //        throw Oops.Oh($"更新失败:{ex.Message}");
-        //    }
+                var addConditionalButtonGroup = buttonGroup as ConditionalButtonGroup;
+                addConditionalButtonGroup.matchrule = input.MenuMatchRule;
+                result = CommonApi.CreateMenuConditional(AppId, addConditionalButtonGroup);
+                var message = $"menuid：{(result as CreateMenuConditionalResult).menuid}";
+                if (result.errcode == 0)
+                {
+                    return "菜单更新成功:" + message;
+                }
+                else
+                {
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
 
-        //}
+                throw Oops.Oh($"更新失败:{ex.Message}");
+            }
 
+        }
+
+        /// <summary>
+        /// 测试个性化菜单匹配结果
+        /// </summary>
+        /// <param name="user_id"></param>
+        /// <returns></returns>
+        [HttpPost("/menu/test/{user_id}")]
+        public dynamic PersonalMenuTest(string user_id)
+        {
+            var result = CommonApi.TryMatch(AppId, user_id);
+            return result;
+        }
+
+        /// <summary>
+        /// 获取自定义菜单配置
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("/menu/personal")]
+        public async Task<dynamic> GetPersonalMenu()
+        {
+            var result = CommonApi.GetCurrentSelfMenuInfo(AppId);
+            return result;
+        }
 
     }
 }

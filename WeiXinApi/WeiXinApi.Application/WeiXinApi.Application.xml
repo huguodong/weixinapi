@@ -113,6 +113,16 @@
             <param name="isTemp"></param>
             <returns></returns>
         </member>
+        <member name="P:WeiXinApi.Application.Services.AddPersonalInput.ResultFull">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.AddPersonalInput.MenuMatchRule">
+            <summary>
+            规则
+            </summary>
+        </member>
         <member name="M:WeiXinApi.Application.Services.MenuService.CrateMenu(Senparc.Weixin.MP.GetMenuResultFull)">
             <summary>
             创建菜单
@@ -129,6 +139,26 @@
         <member name="M:WeiXinApi.Application.Services.MenuService.Delete">
             <summary>
             删除菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MenuService.CratePersonalMenu(WeiXinApi.Application.Services.AddPersonalInput)">
+            <summary>
+            创建个性化菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MenuService.PersonalMenuTest(System.String)">
+            <summary>
+            测试个性化菜单匹配结果
+            </summary>
+            <param name="user_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MenuService.GetPersonalMenu">
+            <summary>
+            获取自定义菜单配置
             </summary>
             <returns></returns>
         </member>

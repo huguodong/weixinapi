@@ -10,6 +10,8 @@
 <p><span style="font-size: 24px;"><a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/huguodong/p/16316790.html">开发微信公众号系列之八：自定义菜单</a></span></p>
 <p><span style="font-size: 24px;"><a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/huguodong/p/16327311.html">开发微信公众号系列之九：事件推送</a></span></p>
 <p><span style="font-size: 24px;"><a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/huguodong/p/16334346.html">开发微信公众号系列之十：模板消息</a></span></p>
+<p><span style="font-size: 24px;"><a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/huguodong/p/16337558.html">开发微信公众号系列之十一：素材管理</a></span></p>
+<p><span style="font-size: 24px;"><a class="postTitle2 vertical-middle" href="https://www.cnblogs.com/huguodong/p/16338165.html">开发微信公众号系列之十二：用户管理</a></span></p>
 <h1>三、Git地址</h1>
 <p><span style="font-size: 18pt;"><a href="https://gitee.com/huguodong520/weixinapi" target="_blank" rel="noopener">https://gitee.com/huguodong520/weixinapi</a></span></p>
 <h1>四、友情链接</h1>

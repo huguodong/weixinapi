@@ -105,9 +105,100 @@
             文件
             </summary>
         </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverAddInput.UploadForeverMediaType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverAddInput.File">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverAddInput.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverAddInput.Introduction">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverPageInput.UploadMediaFileType">
+            <summary>
+            媒体类型
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverPageInput.Offset">
+            <summary>
+            从全部素材的该偏移位置开始返回，0表示从第一个素材 返回
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.ForeverPageInput.Count">
+            <summary>
+            返回素材的数量，取值在1到20之间
+            </summary>
+        </member>
         <member name="M:WeiXinApi.Application.Services.MaterialService.UploadTemp(WeiXinApi.Application.Services.MaterialAddInput)">
             <summary>
             上传临时素材
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.UploadForever(WeiXinApi.Application.Services.ForeverAddInput)">
+            <summary>
+            上传永久素材
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.UploadForeverVideo(WeiXinApi.Application.Services.ForeverAddInput)">
+            <summary>
+            上传永久视频素材
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.UploadImage(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传图文消息内的图片获取URL
+            </summary>
+            <param name="formFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.Delete(System.String)">
+            <summary>
+            删除素材
+            </summary>
+            <param name="mediaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.GetTemp(System.String)">
+            <summary>
+            获取临时素材
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.Total">
+            <summary>
+            素材总数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.ImagePage(WeiXinApi.Application.Services.ForeverPageInput)">
+            <summary>
+            图文素材列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.MaterialService.Page(WeiXinApi.Application.Services.ForeverPageInput)">
+            <summary>
+            素材列表
             </summary>
             <param name="input"></param>
             <returns></returns>
@@ -412,6 +503,133 @@
         <member name="M:WeiXinApi.Application.Services.TemplateService.Send(WeiXinApi.Application.Services.TemplateInput)">
             <summary>
             发送模板消息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.TagInput.Name">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.UserInput.OpenId">
+            <summary>
+            微信号
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.UserInput.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.UserListInput.NextOpenId">
+            <summary>
+            第一个拉取的OPENID，不填默认从头开始拉取
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.BlackInput.OpenidList">
+            <summary>
+            需要拉入黑名单的用户的openid，一次拉黑最多允许20个
+            </summary>
+        </member>
+        <member name="P:WeiXinApi.Application.Services.BlackInput.BeginOpenid">
+            <summary>
+            当 begin_openid 为空时，默认从开头拉取。
+            </summary>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.CreateTag(WeiXinApi.Application.Services.TagInput)">
+            <summary>
+            创建标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.GetTags(WeiXinApi.Application.Services.TagInput)">
+            <summary>
+            获取公众号已创建的标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.UpdateTag(WeiXinApi.Application.Services.UpdateTagInput)">
+            <summary>
+            编辑标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.DeleteTag(WeiXinApi.Application.Services.UpdateTagInput)">
+            <summary>
+            删除标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.GetTagUser(WeiXinApi.Application.Services.UpdateTagInput)">
+            <summary>
+            获取标签下粉丝列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.BatchTag(WeiXinApi.Application.Services.UserTagInput)">
+            <summary>
+            批量为用户打标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.BatchUnTag(WeiXinApi.Application.Services.UserTagInput)">
+            <summary>
+            批量为用户取消标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.UserTagList(System.String)">
+            <summary>
+            获取用户身上的标签列表
+            </summary>
+            <param name="openid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.UpdateRemark(WeiXinApi.Application.Services.UserInput)">
+            <summary>
+            设置用户备注名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.UserInfo(System.String)">
+            <summary>
+            获取用户基本信息
+            </summary>
+            <param name="openid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.UserList(WeiXinApi.Application.Services.UserListInput)">
+            <summary>
+            获取用户列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.Batchblacklist(WeiXinApi.Application.Services.BlackInput)">
+            <summary>
+            批量拉黑用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.GetBlackList(WeiXinApi.Application.Services.BlackInput)">
+            <summary>
+            获取黑名单列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeiXinApi.Application.Services.User.UserService.BatchUnBlackList(WeiXinApi.Application.Services.BlackInput)">
+            <summary>
+            批量取消拉黑用户
             </summary>
             <param name="input"></param>
             <returns></returns>
